@@ -324,8 +324,10 @@ export default {
         ),
         required: true,
       },
-      { label: 'emailUser', tip: intl.get('邮箱地址'), required: true },
-      { label: 'emailPass', tip: intl.get('邮箱SMTP授权码'), required: true },
+      { label: 'emailUser', tip: intl.get('邮箱账号'), required: true },
+      { label: 'emailPass', tip: intl.get('邮箱密码'), required: true },
+      { label: 'emailFrom', tip: intl.get('邮件发件地址'), required: true },
+      { label: 'emailTo', tip: intl.get('邮件收件地址'), required: true },
     ],
     pushMe: [
       {

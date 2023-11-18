@@ -536,7 +536,7 @@ export default class NotificationService {
   }
 
   private async email() {
-    const { emailPass, emailService, emailUser } = this.params;
+    const { emailPass, emailService, emailUser, emailFrom, emailTo } = this.params;
 
     try {
       const transporter = nodemailer.createTransport({
@@ -548,8 +548,8 @@ export default class NotificationService {
       });
 
       const info = await transporter.sendMail({
-        from: `"青龙快讯" <${emailUser}>`,
-        to: `${emailUser}`,
+        from: `"青龙快讯" <${emailFrom}>`,
+        to: `${emailTo}`,
         subject: `${this.title}`,
         html: `${this.content.replace(/\n/g, '<br/>')}`,
       });
